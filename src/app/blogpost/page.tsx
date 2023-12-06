@@ -339,14 +339,14 @@ function BlogPost() {
           </div>
 
           <div className="w-full md:w1/2">
-            <h1>An ecosystem of towels</h1>
-            <p>
+            <h1 className="mt-2 -ml-16 text-3xl font-semibold ">An ecosystem of towels</h1>
+            <p className="-ml-16 w-4/5">
               Racks or hooks that allow air to circulate around each towel
               prolong their freshness. They dry quick and the need for frequent
               washing is minimized.
             </p>
-            <h1>Make your mop disappear</h1>
-            <p>
+            <h1 className="mt-2 -ml-16 text-3xl font-semibold">Make your mop disappear</h1>
+            <p className="-ml-16 w-4/5">
               Having your cleaning tools organized makes them easier to both use
               and return to. When they’re not needed, close the curtain and feel
               the peace of mind it brings.
@@ -358,8 +358,8 @@ function BlogPost() {
       <div className="mx-auto max-w-screen-xl mt-2 w-">
         <div className="flex flex-col md:flex-row">
           <div className="w-full relative">
-            <h1 className="justify-between font-semibold text-gray-900 text-4xl ml-8 mt-8">
-              Articles
+            <h1 className="justify-between font-semibold text-gray-900 text-3xl ml-8 mt-8">
+              You might also like
             </h1>
             <a
               href="#"
@@ -370,7 +370,7 @@ function BlogPost() {
             </a>
           </div>
         </div>
-        <div className="bg-white mb-32">
+        <div className="bg-white mb-20">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  lg:max-w-none lg:grid-cols-3">
               <article className="flex max-w-xl flex-col items-start justify-between relative">
@@ -381,7 +381,7 @@ function BlogPost() {
                   <h1 className="mt-4 font-medium  text-xl">
                     Modern texas home is beautiful and completely kid-friendly
                   </h1>
-                  <p>October 16, 2023</p>
+                  <p className="mt-2 text-xs text-gray-500">October 16, 2023</p>
                 </div>
               </article>
               <article className="flex max-w-xl flex-col items-start justify-between relative">
@@ -392,7 +392,7 @@ function BlogPost() {
                   <h1 className=" font-medium  text-xl">
                     Modern texas home is beautiful and completely kid-friendly
                   </h1>
-                  <p>October 16, 2023</p>
+                  <p className="mt-2 text-xs text-gray-500">October 16, 2023</p>
                 </div>
               </article>
               <article className="flex max-w-xl flex-col items-start justify-between relative">
@@ -403,7 +403,7 @@ function BlogPost() {
                   <h1 className=" font-medium  text-xl">
                     Modern texas home is beautiful and completely kid-friendly
                   </h1>
-                  <p>October 16, 2023</p>
+                  <p className="mt-2 text-xs text-gray-500">October 16, 2023</p>
                 </div>
               </article>
             </div>
