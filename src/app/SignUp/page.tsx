@@ -2,13 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import signin from "../../../public/Img/SignUp.png";
+import signin from "../../../public/Img/signup.png";
 
 const SignUp = () => {
   return (
     <div className="mx-auto max-w-screen-xl">
       <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2">
+        <div className="w-full lg:flex lg:w-1/2 hidden ">
           <Image src={signin} alt={""} width={570} height={2} />
         </div>
         <div className="w-full md:w-1/2">
@@ -26,7 +26,7 @@ const SignUp = () => {
                       </p>
                     </td>
                     <td>
-                      <Link href="/SignIn" className="text-emerald-500 ">
+                      <Link href="/signin" className="text-emerald-500 ">
                         Sign in
                       </Link>
                     </td>
@@ -94,7 +94,7 @@ const SignUp = () => {
                 </div>
 
                 <div>
-                  <Link href={"/HomePage"}>
+                  <Link href={"/homepage"}>
                   <button
                     type="submit"
                     className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-white bg-black shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"

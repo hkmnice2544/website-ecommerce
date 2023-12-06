@@ -17,6 +17,9 @@ import money from "../../../public/Img/Homepage/money.png";
 import lock from "../../../public/Img/Homepage/lock 01.png";
 import call from "../../../public/Img/Homepage/call.png";
 import lower from "../../../public/Img/Homepage/new lower.png";
+import art1 from "../../../public/Img/Homepage/Articles1.png";
+import art2 from "../../../public/Img/Homepage/Articles2.png";
+import art3 from "../../../public/Img/Homepage/Articles3.png";
 
 const callouts = [
   {
@@ -62,10 +65,10 @@ const HomePage = () => {
           </button>
         </div>
       </div>
-      <div className="navbar bg-base-100 shadow">
+      <div className=" navbar bg-base-100 shadow">
         <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div className="dropdown lg:hidden">
+            <div tabIndex={0} role="button" className="bg-slate-400  btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -81,27 +84,28 @@ const HomePage = () => {
                 />
               </svg>
             </div>
-            <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
-            </ul>
+            <ul className=" bg-slate-400 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 right-0">
+  <li>
+    <a>Item 1</a>
+  </li>
+  <li>
+    <a>Parent</a>
+    <ul className="p-2">
+      <li>
+        <a>Submenu 1</a>
+      </li>
+      <li>
+        <a>Submenu 2</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a>Item 3</a>
+  </li>
+</ul>
+
           </div>
-          <a className="btn btn-ghost text-xl ml-32">3legant.</a>
+          <a className="btn btn-ghost text-xl -ml-4 lg:float-left lg:ml-32">3legant.</a>
         </div>
         <div className="navbar-center hidden lg:flex  ml-32">
           <ul className="menu menu-horizontal px-1">
@@ -119,8 +123,8 @@ const HomePage = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end mr-36 ml">
-          <button className="btn btn-ghost btn-circle">
+        <div className="navbar-end mr- lg:flex  lg:mr-36">
+          <button className="btn btn-ghost btn-circle hidden lg:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -136,7 +140,7 @@ const HomePage = () => {
               />
             </svg>
           </button>
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end hidden lg:flex">
             <div
               tabIndex={0}
               role="button"
@@ -164,13 +168,13 @@ const HomePage = () => {
               </li>
             </ul>
           </div>
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end ">
             <div
               tabIndex={0}
               role="button"
               className="btn btn-ghost btn-circle"
             >
-              <div className="indicator">
+              <div className="indicator ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -192,7 +196,7 @@ const HomePage = () => {
               tabIndex={0}
               className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
             >
-              <div className="card-body">
+              <div className="card-body flex ">
                 <span className="font-bold text-lg">8 Items</span>
                 <span className="text-info">Subtotal: $999</span>
                 <div className="card-actions">
@@ -282,7 +286,7 @@ const HomePage = () => {
       </div>
       <div className=" -mt-4">
         <div className="mx-auto max-w-screen-xl  ">
-          <div className="grid grid-rows-1 grid-flow-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
             <div className=" row-span-3 ...">
               {callouts.map((callout, index) => (
                 <div
@@ -294,7 +298,7 @@ const HomePage = () => {
                   <div className={index === 0 ? "w-full" : "w-full md:w-1/2 "}>
                     <div className="relative ">
                       <Image
-                        className=" m-auto"
+                        className="m-auto"
                         src={living}
                         alt={""}
                         width={550}
@@ -326,7 +330,7 @@ const HomePage = () => {
                   <div className={index === 0 ? "w-full" : "w-full md:w-1/2 "}>
                     <div className="relative ">
                       <Image
-                        className=" m-auto"
+                        className="m-auto"
                         src={bedrm}
                         alt={""}
                         width={550}
@@ -358,7 +362,7 @@ const HomePage = () => {
                   <div className={index === 0 ? "w-full" : "w-full md:w-1/2 "}>
                     <div className="relative ">
                       <Image
-                        className=" m-auto"
+                        className="m-auto"
                         src={kitcn}
                         alt={""}
                         width={550}
@@ -382,27 +386,23 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-screen-xl mt-2 w-">
+      <div className="mx-auto max-w-screen-xl mt-2 ">
         <div className="flex flex-col md:flex-row">
           <div className="w-full ">
-            <h1 className="font-semibold text-gray-900 text-2xl ml-8 mt-8">
+            <h1 className="justify-between font-semibold text-gray-900 text-4xl ml-10 mt-8">
               New
             </h1>
-            <h1 className="font-semibold text-gray-900 text-2xl ml-8 ">
+            <h1 className="justify-between font-semibold text-gray-900 text-4xl ml-10 mt-8">
               Arrivals
             </h1>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-screen-xl mt-2 w-">
-        <div className="flex flex-col md:flex-row"></div>
-      </div>
-
       <div className="mx-auto max-w-screen-xl mt-2 ">
-        <div className="flex flex-col md:flex-row  mb-8">
-          <div className="ml-8 md:w-1/4">
-            <div className="w-72 bg-neutral-100 p-10">
+        <div className="sm:flex-row lg:flex-row grid grid-cols-2 md:flex lg:flex gap-4  mb-8"> 
+          <div className="md:ml-8 md:w-1/4 sm:m-auto ">
+            <div className=" sm:w-40 md:w-72 bg-neutral-100 p-10">
               <Image className="-ml-4" src={delivery} alt={""} />
               <h1 className="-ml-4 my-3 font-semibold text-gray-900  text-xl">
                 Free Shipping
@@ -410,8 +410,8 @@ const HomePage = () => {
               <p className="-ml-4 text-gray-500 text-sm">Order above $200</p>
             </div>
           </div>
-          <div className="-ml-3 md:w-1/4">
-            <div className="w-72 bg-neutral-100 p-10">
+          <div className="-ml-3 md:w-1/4 sm:m-auto">
+            <div className="sm:w-40 md:w-72 bg-neutral-100 p-10">
               <Image className="-ml-4" src={money} alt={""} />
               <h1 className="-ml-4 my-3 font-semibold text-gray-900  text-xl">
                 Money-back
@@ -419,8 +419,8 @@ const HomePage = () => {
               <p className="-ml-4 text-gray-500 text-sm">30 days guarantee</p>
             </div>
           </div>
-          <div className="-ml-3 md:w-1/4">
-            <div className="w-72 bg-neutral-100 p-10">
+          <div className="md:-ml-3 md:w-1/4  sm:m-auto">
+            <div className="sm:w-40 md:w-72 bg-neutral-100 p-10">
               <Image className="-ml-4" src={lock} alt={""} />
               <h1 className="-ml-4 my-3 font-semibold text-gray-900  text-xl">
                 Secure Payments
@@ -428,8 +428,8 @@ const HomePage = () => {
               <p className="-ml-4 text-gray-500 text-sm">Secured by Stripe</p>
             </div>
           </div>
-          <div className="-ml-3 md:w-1/4">
-            <div className="w-72 bg-neutral-100 p-10">
+          <div className="-ml-3 md:w-1/4 sm:m-auto">
+            <div className="sm:w-40 md:w-72 bg-neutral-100 p-10">
               <Image className="-ml-4" src={call} alt={""} />
               <h1 className="-ml-4 my-3 font-semibold text-gray-900  text-xl">
                 24/7 Support
@@ -442,13 +442,103 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-screen-xl mb-8">
+      <div className="mx-auto max-w-screen-xl mb-8 max-h-full">
         <div className="flex flex-col md:flex-row">
-          <div className=" w-full md:w-1/2">
-            <Image className="" src={lower} alt={""} width={570} />
+          <div className="w-full -ml-32">
+            <Image className="" src={lower} alt={""} width={790} />
           </div>
-          <div className="bg-neutral-100 -ml-16 w-full md:w-1/2">
-            <p>SALE UP TO 35% OFF</p>
+          <div className="relative bg-neutral-100 -ml-10 -mr-28 md:w-11/12">
+            <div className=" p-16">
+              <p className="mt-24 mb-4 font-bold text-base text-blue-600 ">
+                SALE UP TO 35% OFF
+              </p>
+              <h1 className=" font-semibold text-4xl">HUNDREDS of</h1>
+              <h1 className="mb-5 font-semibold text-4xl">New lower prices!</h1>
+              <p className="mr-40 mt-1 text-lg">
+                It’s more affordable than ever to give every room in your home a
+                stylish makeover
+              </p>
+              <a
+                href="#"
+                className="absolute top-96 font-semibold text-black border-b border-black"
+              >
+                <span className="absolute inset-0" aria-hidden="true" />
+                Shop Now <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-screen-xl mt-2 w-">
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full relative">
+            <h1 className="justify-between font-semibold text-gray-900 text-4xl ml-8 mt-8">
+              Articles
+            </h1>
+            <a
+              href="#"
+              className="absolute top-10 right-16 font-semibold text-black border-b border-black"
+            >
+              <span className="absolute inset-0" aria-hidden="true" />
+              More Articles<span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div className="bg-white mb-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  lg:max-w-none lg:grid-cols-3">
+              <article className="flex max-w-xl flex-col items-start justify-between relative">
+                <div className="flex items-center gap-x-4 text-xs">
+                  <Image src={art1} alt={""}></Image>
+                </div>
+                <div>
+                  <h1 className="mt-4 font-medium  text-xl">
+                    7 ways to decor your home
+                  </h1>
+                  <p></p>
+                  <a
+                    href="#"
+                    className="absolute top-96 right-50 font-semibold text-black border-b border-black"
+                  >
+                    <span className="absolute inset-0" aria-hidden="true" />
+                    Read More<span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </article>
+              <article className="flex max-w-xl flex-col items-start justify-between relative">
+                <div className="flex items-center gap-x-4 text-xs">
+                  <Image src={art2} alt={""}></Image>
+                </div>
+                <div>
+                  <h1 className=" font-medium  text-xl">
+                    Kitchen organization
+                  </h1>
+                  <a
+                    href="#"
+                    className="absolute top-96 right-50 font-semibold text-black border-b border-black"
+                  >
+                    <span className="absolute inset-0" aria-hidden="true" />
+                    Read More<span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </article>
+              <article className="flex max-w-xl flex-col items-start justify-between relative">
+                <div className="flex items-center gap-x-4 text-xs">
+                  <Image src={art3} alt={""}></Image>
+                </div>
+                <div>
+                  <h1 className=" font-medium  text-xl">Decor your bedroom</h1>
+                  <a
+                    href="#"
+                    className="absolute top-96 right-50 font-semibold text-black border-b border-black"
+                  >
+                    <span className="absolute inset-0" aria-hidden="true" />
+                    Read More<span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -497,50 +587,51 @@ const HomePage = () => {
         </div>
       </div>
 
-      <footer className="footer footer-center p-10 bg-zinc-900 text-base-content ">
-        <nav className="flex items-center justify-between gap-4">
-          <h1 className="text-white text-2xl font-semibold">
-            3legant
-            <strong style={{ fontWeight: "bold", color: "gray" }}>
-              .
-            </strong>{" "}
-          </h1>
-          <Image className="" src={rectangle} alt={""} />
-          <p className="text-white  mr-96">Gift & Decoration Store</p>
-          <div className="flex gap-10  ml-20 ">
-            <a className="link link-hover text-white">Home</a>
-            <a className="link link-hover text-white">Shop</a>
-            <a className="link link-hover text-white">Product</a>
-            <a className="link link-hover text-white">Blog</a>
-            <a className="link link-hover text-white">Contact Us</a>
-          </div>
+      <footer className="footer footer-center p-10 bg-zinc-900 text-base-content">
+  <nav className="flex items-center justify-between gap-4">
+    <h1 className="text-white text-2xl font-semibold">
+      3legant
+      <strong style={{ fontWeight: "bold", color: "gray" }}>
+        .
+      </strong>{" "}
+    </h1>
+    <Image className="hidden lg:block" src={rectangle} alt={""} />
+    <p className="text-white lg:mr-96">Gift & Decoration Store</p>
+    <div className="flex gap-10 ml-20 ">
+      <a className="link link-hover text-white">Home</a>
+      <a className="link link-hover text-white">Shop</a>
+      <a className="link link-hover text-white">Product</a>
+      <a className="link link-hover text-white">Blog</a>
+      <a className="link link-hover text-white">Contact Us</a>
+    </div>
+  </nav>
+
+  <div className="lg:w-4/5 border-b border-gray mt-4"></div>
+
+  <aside className="lg:w-4/5 -mt-8">
+    <nav className="grid grid-flow-col gap-6">
+      <p className="text-white">
+        Copyright © 2023 3legant. All right reserved
+      </p>
+      <a className="link link-hover text-white">Privacy Policy</a>
+      <a className="link link-hover text-white lg:mr-36">Terms of Use</a>
+      <div className="lg:float-left lg:ml-80">
+        <nav className="grid grid-flow-col gap-7">
+          <a className="text-white link link-hover">
+            <Image className="w-full" src={ig} alt={""} />
+          </a>
+          <a className="text-white link link-hover">
+            <Image className="w-full" src={fb} alt={""} />
+          </a>
+          <a className="text-white link link-hover">
+            <Image className="w-full" src={yt} alt={""} />
+          </a>
         </nav>
+      </div>
+    </nav>
+  </aside>
+</footer>
 
-        <div className=" w-4/5  border-b border-gray mt-4"></div>
-
-        <aside className=" w-4/5 -mt-8">
-          <nav className="grid grid-flow-col gap-6">
-            <p className="text-white">
-              Copyright © 2023 3legant. All right reserved
-            </p>
-            <a className="link link-hover text-white">Privacy Policy</a>
-            <a className="link link-hover text-white mr-36">Terms of Use</a>
-            <div className="float-left ml-80">
-              <nav className="grid grid-flow-col gap-7">
-                <a className="text-white link link-hover">
-                  <Image className="w-full" src={ig} alt={""} />
-                </a>
-                <a className="text-white link link-hover">
-                  <Image className="w-full" src={fb} alt={""} />
-                </a>
-                <a className="text-white link link-hover">
-                  <Image className="w-full" src={yt} alt={""} />
-                </a>
-              </nav>
-            </div>
-          </nav>
-        </aside>
-      </footer>
     </div>
   );
 };
