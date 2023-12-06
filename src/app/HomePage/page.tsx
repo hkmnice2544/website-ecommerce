@@ -20,6 +20,15 @@ import lower from "../../../public/Img/Homepage/new lower.png";
 import art1 from "../../../public/Img/Homepage/Articles1.png";
 import art2 from "../../../public/Img/Homepage/Articles2.png";
 import art3 from "../../../public/Img/Homepage/Articles3.png";
+import vecter from "../../../public/Img/Homepage/vecter.png";
+import heart from "../../../public/Img/Homepage/Heart.png";
+import cart from "../../../public/Img/Homepage/Cart.png";
+import igb from "../../../public/Img/Homepage/ig-b.png";
+import fbb from "../../../public/Img/Homepage/fb-b.png";
+import ytb from "../../../public/Img/Homepage/yt-b.png";
+import search from "../../../public/Img/Homepage/search-nav.png";
+import Link from "next/link";
+
 
 const callouts = [
   {
@@ -68,44 +77,140 @@ const HomePage = () => {
       <div className=" navbar bg-base-100 shadow">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
-            <div tabIndex={0} role="button" className="bg-slate-400  btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul className=" bg-slate-400 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 right-0">
-  <li>
-    <a>Item 1</a>
-  </li>
-  <li>
-    <a>Parent</a>
-    <ul className="p-2">
-      <li>
-        <a>Submenu 1</a>
-      </li>
-      <li>
-        <a>Submenu 2</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a>Item 3</a>
-  </li>
-</ul>
+            <div className="drawer">
+              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+              <div className="drawer-content">
+                {/* Page content here */}
+                <label htmlFor="my-drawer" className="btn bg-white border-none drawer-button ml-8">
+                  <Image src={vecter} alt={""}></Image>
+                </label>
+               
+              </div>
+              <div className="drawer-side" style={{ zIndex: 9999 }}>
+                <label
+                  htmlFor="my-drawer"
+                  aria-label="close sidebar"
+                  className="drawer-overlay"
+                ></label>
 
+                <ul className="menu p-4 w-11/12 min-h-full bg-white text-base-content">
+                  <div className="flex justify-between items-center p-2">
+                    <h1 className="text-lg font-semibold">3legant.</h1>
+                    <button>
+                      <Image src={close} alt={""}></Image>
+                    </button>
+                  </div>
+                  <div className="relative mt-2">
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      className="input input-bordered w-full flex justify-center max-w-2xl pl-10"
+                    />
+                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 ">
+                      {/* Add your icon component or image here */}
+                      <Image src={search} alt="Search Icon" />
+                    </div>
+                  </div>
+
+                  <li className="mt-2">
+                    <a>Home</a>
+                  </li>
+                  <hr className="my-2 border-t border-gray-300" />
+                  <li>
+                    <details>
+                      <summary>Shop</summary>
+                      <ul>
+                        <li>
+                          <a>Submenu 1</a>
+                        </li>
+                        <li>
+                          <a>Submenu 2</a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                  <hr className="my-2 border-t border-gray-300" />
+                  <li>
+                    <details>
+                      <summary>Product</summary>
+                      <ul>
+                        <li>
+                          <a>Submenu 1</a>
+                        </li>
+                        <li>
+                          <a>Submenu 2</a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                  <hr className="my-2 border-t border-gray-300" />
+                  <li>
+                    <a>Contact Us</a>
+                  </li>
+                  <hr className="my-2 border-t border-gray-300" />
+                  <li className="mt-auto ">
+                    <div className="mt-auto flex justify-between items-center">
+                      <a>Cart</a>
+
+                      <div className="dropdown dropdown-end ">
+                        <div
+                          tabIndex={0}
+                          role="button"
+                         
+                        >
+                          <div className="indicator ">
+                            <Image src={cart} alt={""}></Image>
+                            <span className="badge badge-sm indicator-item bg-black text-white">
+                              2
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <hr className=" border-t border-gray-300" />
+                  <li>
+                    <div className=" flex justify-between items-center">
+                      <a>Wishlist</a>
+
+                      <div className="dropdown dropdown-end ">
+                        <div
+                          tabIndex={0}
+                          role="button"
+                         
+                        >
+                          <div className="indicator ">
+                            <Image src={heart} alt={""}></Image>
+                            <span className="badge badge-sm indicator-item bg-black text-white">
+                              2
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <hr className=" border-t border-gray-300" />
+                  <button className=" mt-5 btn btn-mdsm:btn-sm md:btn-md lg:btn-lg bg-black text-white">
+                    Sign In
+                  </button>
+                  <div className="grid grid-cols-3 w-32 m-5 ml-1">
+                    <button>
+                      <Image className="mr-auto" src={igb} alt={""}></Image>
+                    </button>
+                    <button>
+                      <Image className="mr-auto" src={fbb} alt={""}></Image>
+                    </button>
+                    <button>
+                      <Image className="mr-auto" src={ytb} alt={""}></Image>
+                    </button>
+                  </div>
+                </ul>
+              </div>
+            </div>
           </div>
-          <a className="btn btn-ghost text-xl -ml-4 lg:float-left lg:ml-32">3legant.</a>
+          <a className="text-xl ml-0 lg:float-left lg:ml-36 sm:ml-32 ">
+            3legant.
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex  ml-32">
           <ul className="menu menu-horizontal px-1">
@@ -175,21 +280,8 @@ const HomePage = () => {
               className="btn btn-ghost btn-circle"
             >
               <div className="indicator ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <span className="badge badge-sm indicator-item">8</span>
+                <Image src={cart} alt={""}></Image>
+                <span className="badge badge-sm indicator-item bg-black text-white">8</span>
               </div>
             </div>
             <div
@@ -256,6 +348,60 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div
+        id="default-carousel"
+        className="relative w-full"
+        data-carousel="slide"
+      >
+        <button
+          type="button"
+          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span className="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg
+              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span className="sr-only">Next</span>
+          </span>
+        </button>
       </div>
       <div className="mx-auto max-w-screen-xl">
         <div className="flex flex-col md:flex-row">
@@ -400,7 +546,7 @@ const HomePage = () => {
       </div>
 
       <div className="mx-auto max-w-screen-xl mt-2 ">
-        <div className="sm:flex-row lg:flex-row grid grid-cols-2 md:flex lg:flex gap-4  mb-8"> 
+        <div className="sm:flex-row lg:flex-row grid grid-cols-2 md:flex lg:flex gap-4  mb-8">
           <div className="md:ml-8 md:w-1/4 sm:m-auto ">
             <div className=" sm:w-40 md:w-72 bg-neutral-100 p-10">
               <Image className="-ml-4" src={delivery} alt={""} />
@@ -588,50 +734,50 @@ const HomePage = () => {
       </div>
 
       <footer className="footer footer-center p-10 bg-zinc-900 text-base-content">
-  <nav className="flex items-center justify-between gap-4">
-    <h1 className="text-white text-2xl font-semibold">
-      3legant
-      <strong style={{ fontWeight: "bold", color: "gray" }}>
-        .
-      </strong>{" "}
-    </h1>
-    <Image className="hidden lg:block" src={rectangle} alt={""} />
-    <p className="text-white lg:mr-96">Gift & Decoration Store</p>
-    <div className="flex gap-10 ml-20 ">
-      <a className="link link-hover text-white">Home</a>
-      <a className="link link-hover text-white">Shop</a>
-      <a className="link link-hover text-white">Product</a>
-      <a className="link link-hover text-white">Blog</a>
-      <a className="link link-hover text-white">Contact Us</a>
-    </div>
-  </nav>
-
-  <div className="lg:w-4/5 border-b border-gray mt-4"></div>
-
-  <aside className="lg:w-4/5 -mt-8">
-    <nav className="grid grid-flow-col gap-6">
-      <p className="text-white">
-        Copyright © 2023 3legant. All right reserved
-      </p>
-      <a className="link link-hover text-white">Privacy Policy</a>
-      <a className="link link-hover text-white lg:mr-36">Terms of Use</a>
-      <div className="lg:float-left lg:ml-80">
-        <nav className="grid grid-flow-col gap-7">
-          <a className="text-white link link-hover">
-            <Image className="w-full" src={ig} alt={""} />
-          </a>
-          <a className="text-white link link-hover">
-            <Image className="w-full" src={fb} alt={""} />
-          </a>
-          <a className="text-white link link-hover">
-            <Image className="w-full" src={yt} alt={""} />
-          </a>
+        <nav className="flex items-center justify-between gap-4">
+          <h1 className="text-white text-2xl font-semibold">
+            3legant
+            <strong style={{ fontWeight: "bold", color: "gray" }}>
+              .
+            </strong>{" "}
+          </h1>
+          <Image className="hidden lg:block" src={rectangle} alt={""} />
+          <p className="text-white lg:mr-96">Gift & Decoration Store</p>
+          <div className="flex gap-10 ml-20 ">
+            <a className="link link-hover text-white">Home</a>
+            <a className="link link-hover text-white">Shop</a>
+            <a className="link link-hover text-white">Product</a>
+            <Link href="/blogpost" className="text-white">Blog</Link>
+            <a className="link link-hover text-white">Contact Us</a>
+          </div>
+          
         </nav>
-      </div>
-    </nav>
-  </aside>
-</footer>
 
+        <div className="lg:w-4/5 border-b border-gray mt-4"></div>
+
+        <aside className="lg:w-4/5 -mt-8">
+          <nav className="grid grid-flow-col gap-6">
+            <p className="text-white">
+              Copyright © 2023 3legant. All right reserved
+            </p>
+            <a className="link link-hover text-white">Privacy Policy</a>
+            <a className="link link-hover text-white lg:mr-36">Terms of Use</a>
+            <div className="lg:float-left lg:ml-80">
+              <nav className="grid grid-flow-col gap-7">
+                <a className="text-white link link-hover">
+                  <Image className="w-full" src={ig} alt={""} />
+                </a>
+                <a className="text-white link link-hover">
+                  <Image className="w-full" src={fb} alt={""} />
+                </a>
+                <a className="text-white link link-hover">
+                  <Image className="w-full" src={yt} alt={""} />
+                </a>
+              </nav>
+            </div>
+          </nav>
+        </aside>
+      </footer>
     </div>
   );
 };
