@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ticket from "../../../public/Img/Homepage/ticket-percent.png";
 import close from "../../../public/Img/Homepage/close.png";
 import vecter from "../../../public/Img/Homepage/vecter.png";
 import heart from "../../../public/Img/Homepage/Heart.png";
@@ -9,6 +8,8 @@ import igb from "../../../public/Img/Homepage/ig-b.png";
 import fbb from "../../../public/Img/Homepage/fb-b.png";
 import ytb from "../../../public/Img/Homepage/yt-b.png";
 import search from "../../../public/Img/Homepage/search-nav.png";
+import user from "../../../public/Img/Homepage/user.png";
+import calendar from "../../../public/Img/Homepage/calendar.png";
 
 const BlogPost = () => {
   return (
@@ -141,7 +142,9 @@ const BlogPost = () => {
               </div>
             </div>
           </div>
-          <a className="text-xl ml-0 lg:float-left lg:ml-36 sm:ml-32 ">3legant.</a>
+          <a className="text-xl ml-0 lg:float-left lg:ml-36 sm:ml-32 ">
+            3legant.
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex  ml-32">
           <ul className="menu menu-horizontal px-1">
@@ -235,35 +238,7 @@ const BlogPost = () => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-screen-xl">
-        <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2">
-            <h1 className="font-semibold text-gray-900 text-7xl ml-8 mt-8">
-              Simply Unique
-              <strong style={{ fontWeight: "bold", color: "gray" }}>
-                /
-              </strong>{" "}
-            </h1>
-            <h1 className="font-semibold text-gray-900 text-7xl ml-8 ">
-              Simply Better
-              <strong style={{ fontWeight: "bold", color: "gray" }}>
-                .
-              </strong>{" "}
-            </h1>
-          </div>
-          <div className="w-full md:w-1/2 p-24">
-            <h1>
-              <strong style={{ fontWeight: "bold", color: "black" }}>
-                3legant t
-              </strong>{" "}
-              is a gift & decorations store based in HCMC, Vietnam. Est since
-              2019.
-            </h1>
-          </div>
-        </div>
-      </div>
-
-      <div className="text-sm breadcrumbs">
+      <div className="text-sm breadcrumbs ml-40">
         <ul>
           <li>
             <a>Home</a>
@@ -274,6 +249,29 @@ const BlogPost = () => {
           <li>How to make a busy bathroom a place to relax</li>
         </ul>
       </div>
+      <p className="ml-40">Article</p>
+      <div className="ml-40 ">
+      <h1 className="text-5xl font-medium">
+        How to make a busy bathroom{" "}
+      </h1>
+      <h1 className="text-5xl font-medium">a place to relax</h1>
+
+      </div>
+      
+      <div className="mx-auto max-w-screen-xl ml-40">
+        <div className="flex flex-col md:flex-row">
+          <div className=" float-left">
+            <Image src={user} alt={""}></Image>
+          </div>
+          <h1>Henrik Annemark</h1>
+          <div className=" float-left">
+            <Image src={calendar} alt={""}></Image>
+          </div>
+          <h1>October 16, 2023</h1>
+        </div>
+      </div>
+
+      
     </div>
   );
 };
