@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import imgbn from "../../../public/Img/Homepage/Banner.png";
@@ -28,7 +29,7 @@ import fbb from "../../../public/Img/Homepage/fb-b.png";
 import ytb from "../../../public/Img/Homepage/yt-b.png";
 import search from "../../../public/Img/Homepage/search-nav.png";
 import Link from "next/link";
-
+import { useState } from 'react';
 
 const callouts = [
   {
@@ -41,7 +42,8 @@ const callouts = [
     href: "#",
   },
 ];
-const HomePage = () => {
+function HomePage () {
+  const [step,setStep] = useState(1);
   return (
     <div>
       <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 shadow">
@@ -208,14 +210,18 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <a className="text-xl ml-0 lg:float-left lg:ml-36 sm:ml-32 ">
+          <a className=" font-semibold text-xl ml-0 lg:float-left lg:ml-36 sm:ml-32 ">
             3legant.
           </a>
         </div>
         <div className="navbar-center hidden lg:flex  ml-32">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Home</a>
+            <li className={`${
+            step === 1
+              ? "font-bold"
+              : " "
+          }`}>
+              <a onClick={()=> setStep(2)}>Home</a>
             </li>
             <li>
               <a>Shop</a>
@@ -778,6 +784,7 @@ const HomePage = () => {
           </nav>
         </aside>
       </footer>
+      
     </div>
   );
 };
