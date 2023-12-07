@@ -47,20 +47,17 @@ function HomePage () {
   return (
     <div>
       <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 shadow">
-        <div
-          className="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-          aria-hidden="true"
-        ></div>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 bg ">
           <Image className="" src={ticket} alt={""} />
-          <p className="text-sm leading-6 text-gray-900 -ml-2">
+          <p className="text-sm leading-6 text-gray-900 lg:-ml-2 ">
             <strong className="font-semibold">
               30% off storewide — Limited time!{" "}
             </strong>
           </p>
           <a
             href="#"
-            className="font-semibold text-blue-500 border-b border-blue-500"
+            className="font-semibold text-blue-500 border-b border-blue-500 lg:flex hidden"
           >
             <span className="absolute inset-0" aria-hidden="true" />
             Shop Now <span aria-hidden="true">&rarr;</span>
@@ -76,7 +73,7 @@ function HomePage () {
           </button>
         </div>
       </div>
-      <div className=" navbar bg-base-100 shadow">
+      <div className=" navbar bg-base-100 shadow flex">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
             <div className="drawer">
@@ -192,7 +189,7 @@ function HomePage () {
                     </div>
                   </li>
                   <hr className=" border-t border-gray-300" />
-                  <button className=" mt-5 btn btn-mdsm:btn-sm md:btn-md lg:btn-lg bg-black text-white">
+                  <button className=" mt-5 btn btn-md sm:btn-sm md:btn-md lg:btn-lg bg-black text-white">
                     Sign In
                   </button>
                   <div className="grid grid-cols-3 w-32 m-5 ml-1">
@@ -310,7 +307,7 @@ function HomePage () {
       <div className=" flex justify-center">
         <div className="carousel w-4/5 ">
           <div id="slide1" className="carousel-item relative w-full">
-            <Image className="w-full" src={imgbn} alt={""} />
+            <Image className="lg:w-full" src={imgbn} alt={""} />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide4" className="btn btn-circle">
                 ❮
@@ -412,20 +409,20 @@ function HomePage () {
       <div className="mx-auto max-w-screen-xl">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2">
-            <h1 className="font-semibold text-gray-900 text-7xl ml-8 mt-8">
+            <h1 className="lg:font-semibold text-gray-900 lg:text-7xl lg:ml-8 lg:mt-8 ml-10 mt-8 text-4xl font-semibold ">
               Simply Unique
               <strong style={{ fontWeight: "bold", color: "gray" }}>
                 /
               </strong>{" "}
             </h1>
-            <h1 className="font-semibold text-gray-900 text-7xl ml-8 ">
+            <h1 className="font-semibold text-gray-900 lg:text-7xl lg:ml-8 lg:mt-8 ml-10 text-4xl ">
               Simply Better
               <strong style={{ fontWeight: "bold", color: "gray" }}>
                 .
               </strong>{" "}
             </h1>
           </div>
-          <div className="w-full md:w-1/2 p-24">
+          <div className="w-full md:w-1/2 lg:p-24 p-10 lg:mt-0 -mt-4">
             <h1>
               <strong style={{ fontWeight: "bold", color: "black" }}>
                 3legant t
@@ -436,8 +433,8 @@ function HomePage () {
           </div>
         </div>
       </div>
-      <div className=" -mt-4">
-        <div className="mx-auto max-w-screen-xl  ">
+      <div className="lg:mt-4 ">
+        <div className="mx-auto max-w-screen-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
             <div className=" row-span-3 ...">
               {callouts.map((callout, index) => (
@@ -447,7 +444,7 @@ function HomePage () {
                     index === 1 ? "2" : "1"
                   } ...`}
                 >
-                  <div className={index === 0 ? "w-full" : "w-full md:w-1/2 "}>
+                  <div className={index === 0 ? "lg:w-full lg:m-0 m-8" : "w-full md:w-1/2 "}>
                     <div className="relative ">
                       <Image
                         className="m-auto"
@@ -456,12 +453,12 @@ function HomePage () {
                         width={550}
                         height={2}
                       />
-                      <h1 className="font-semibold text-2xl  absolute top-10 left-20 text-black">
+                      <h1 className="font-semibold text-2xl  absolute lg:top-10 lg:left-20 top-8 left-8 text-black">
                         Living Room
                       </h1>
                       <a
                         href="#"
-                        className="absolute top-20 left-20 font-semibold text-black border-b border-black"
+                        className="absolute lg:top-20 lg:left-20 top-16 left-8 font-semibold text-black border-b border-black"
                       >
                         <span className="absolute inset-0" aria-hidden="true" />
                         Shop Now <span aria-hidden="true">&rarr;</span>
